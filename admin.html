@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ElectroRide Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">
+    <a href="admin_dashboard.php">
+      Electro<span class="logo-green">Ride</span>
+    </a>
+  </div>
+<ul>
+  <li><a href="#">Dashboard</a></li>
+
+  <li class="has-submenu">
+    <a href="#" tabindex="0">Vehicles ▾</a>
+    <ul class="submenu">
+      <li><a href="view_vehicles.php">View Vehicles</a></li>
+      <li><a href="manage_vehicles.php">Manage Vehicles</a></li>
+    </ul>
+  </li>
+
+  <li class="has-submenu">
+    <a href="#" tabindex="0">Drivers ▾</a>
+    <ul class="submenu">
+      <li><a href="view_drivers.php">View Drivers</a></li>
+      <li><a href="manage_drivers.php">Manage Drivers</a></li>
+    </ul>
+  </li>
+
+  <li class="has-submenu">
+    <a href="#" tabindex="0">Routes ▾</a>
+    <ul class="submenu">
+      <li><a href="view_routes.php">View Routes</a></li>
+      <li><a href="manage_routes.php">Manage Routes</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#">Passengers</a></li>
+  <li><a href="#">Tickets</a></li>
+  <li><a href="#">Reports</a></li>
+</ul>
+
+</div>
+
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="admin-info">
+      <span>Welcome, Admin</span>
+       <a href="home.html" class="logout">Logout</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Dashboard Overview</h1>
+    <div class="cards">
+      <div class="card">Vehicles: 120</div>
+      <div class="card">Drivers: 85</div>
+      <div class="card">Routes: 45</div>
+      <div class="card">Tickets: 500</div><br>
+     
+    </div><br>
+    <div class="bus-illustration">
+      <img src="my bus.png" alt="ElectroRide Bus" width="1000" height="500">
+    </div>
+  </div>
+    <!-- Footer -->
+  <footer>
+    <p>© 2026 ELECTRORIDE Project. All rights reserved.</p>
+  </footer>
+</body>
+</html>

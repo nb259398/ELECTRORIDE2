@@ -1,0 +1,518 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #1a1a1a;
+  background: #F3FAF5;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.green-text {
+  color: #14b87a;
+}
+
+.white-text {
+  color: white;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-green {
+  background: #14b87a;
+  color: white;
+  border-color: #14b87a;
+}
+
+.btn-green:hover {
+  background: #0f7b55;
+  border-color: #0f7b55;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #0f7b55;
+  border-color: white;
+}
+
+.btn-outline:hover {
+  background: #0f7b55;
+  color: white;
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 16px;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #0d1b2a;
+  padding: 0 30px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.logo-green {
+  color: #14b87a;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.nav-link {
+  padding: 8px 14px;
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  background: #e8f5ee;
+  padding-top: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 520px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-label {
+  display: inline-block;
+  background: rgba(15, 123, 85, 0.12);
+  color: #0f7b55;
+  border: 1px solid rgba(15, 123, 85, 0.25);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #0d1b2a;
+  margin-bottom: 18px;
+}
+
+.hero-desc {
+  font-size: 17px;
+  color: #4a7060;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 430px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sections (shared styles for all content sections) */
+.section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.section-light {
+  background: white;
+}
+
+.section-pale {
+  background: #F3FAF5;
+}
+
+.section-dark {
+  background: #0d1b2a;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  font-size: 16px;
+  color: #5a7060;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Trip Planner */
+.planner-card {
+  background: white;
+  border: 1px solid rgba(15, 123, 85, 0.15);
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.planner-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.swap-btn {
+  background: #14b87a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.swap-btn:hover {
+  background: #0f7b55;
+}
+
+/* ROUTES SECTION */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.route-card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.route-id {
+  font-weight: bold;
+  color: #14b87a;
+  margin-bottom: 8px;
+}
+
+.route-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.route-ends {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.route-info {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.info-tag {
+  background: #f3faf5;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.status-green { background: #14b87a; }
+.status-amber { background: #e6a700; }
+.status-red { background: #d62828; }
+
+/* HOW IT WORKS SECTION */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.step-card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 12px;
+  background: #14b87a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CHARGING SECTION */
+.charger-card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.charger-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.charger-detail {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.charger-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.badge-green { background: #14b87a; }
+.badge-red { background: #d62828; }
+
+.battery-bar {
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.battery-fill {
+  height: 100%;
+  background: #14b87a;
+}
+
+.battery-fill-red {
+  background: #d62828;
+}
+
+/* FEEDBACK SECTION */
+.feedback-card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.feedback-label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.star-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star:hover,
+.star.active {
+  color: #14b87a;
+}
+
+.feedback-thanks {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #14b87a;
+}
+
+/* FOOTER */
+.footer {
+  background: #0d1b2a;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between; /* brand left, links middle, support right */
+  align-items: flex-start;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 40px;
+}
+
+.footer-brand {
+  flex: 1; /* takes left side */
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  margin-top: 10px;
+}
+
+
+ .footer-col h4 {
+  flex: 1; /* each column balances space */
+  min-width: 180px;
+}
+
+.footer-link {
+  display: block;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 20px;
+}
+
+/* Toast Message */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #14b87a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: none;
+}
+.whatsapp-btn {
+  display: inline-block;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #25D366;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  box-shadow: 0 0 15px #25D366;
+}
