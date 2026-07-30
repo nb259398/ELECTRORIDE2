@@ -7,6 +7,7 @@
 </head>
 <body>
 <!-- Sidebar -->
+ 
 <div class="sidebar">
   <div class="logo">
     <a href="admin_dashboard.php">
@@ -19,7 +20,7 @@
   <li class="has-submenu">
     <a href="#" tabindex="0">Vehicles ▾</a>
     <ul class="submenu">
-      <li><a href="view_vehicles.php">View Vehicles</a></li>
+      <li><a href="#vehicles" class="mobile-link">View Vehicles</a></li>
       <li><a href="manage_vehicles.php">Manage Vehicles</a></li>
     </ul>
   </li>
@@ -27,7 +28,7 @@
   <li class="has-submenu">
     <a href="#" tabindex="0">Drivers ▾</a>
     <ul class="submenu">
-      <li><a href="view_drivers.php">View Drivers</a></li>
+      <li><a href="#drivers" class="mobile-link">View Drivers</a></li>
       <li><a href="manage_drivers.php">Manage Drivers</a></li>
     </ul>
   </li>
@@ -35,7 +36,7 @@
   <li class="has-submenu">
     <a href="#" tabindex="0">Routes ▾</a>
     <ul class="submenu">
-      <li><a href="view_routes.php">View Routes</a></li>
+      <li><a href="#routes" class="mobile-link">View Routes</a></li>
       <li><a href="manage_routes.php">Manage Routes</a></li>
     </ul>
   </li>
@@ -46,7 +47,7 @@
 </ul>
 
 </div>
-
+ 
 
   <!-- Topbar -->
   <div class="topbar">
@@ -60,9 +61,9 @@
   <div class="main-content">
     <h1>Dashboard Overview</h1>
     <div class="cards">
-      <div class="card">Vehicles: 120</div>
-      <div class="card">Drivers: 85</div>
-      <div class="card">Routes: 45</div>
+      <div class="card">Vehicles: 5</div>
+      <div class="card">Drivers: 8</div>
+      <div class="card">Routes: 4</div>
       <div class="card">Tickets: 500</div><br>
      
     </div><br>
@@ -70,9 +71,226 @@
       <img src="my bus.png" alt="ElectroRide Bus" width="1000" height="500">
     </div>
   </div>
-    <!-- Footer -->
-  <footer>
-    <p>© 2026 ELECTRORIDE Project. All rights reserved.</p>
-  </footer>
+ 
+    <!-- VEHICLES SECTION -->
+  <section class="section section-pale" id="vehicles">
+    <h2 class="section-title">Our Vehicles</h2>
+    <p class="section-desc">Our bus fleet serving Kampala every day.</p>
+
+    <div class="cards-grid">
+      <div class="bus-card">
+        <div class="bus-id">Bus1</div>
+        <h3 class="route-name">Express North</h3>
+        <p class="route-ends">City Center → Mulago Hospital</p>
+        <p class="driver_name">John Kirunda</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 08:30</span>
+          <span class="info-tag">UGX 3,500</span>
+        </div>
+        <span class="status-badge status-green">On time</span>
+      </div>
+
+      <div class="bus-card">
+        <div class="bus-id">Bus2</div>
+        <h3 class="route-name">Airport Link</h3>
+        <p class="route-ends">Kampala City Center → Entebbe Airport</p>
+         <p class="driver_name">Peter Musoke </p>
+        <div class="route-info">
+          <span class="info-tag">Next: 08:45</span>
+          <span class="info-tag">UGX 5,000</span>
+        </div>
+        <span class="status-badge status-amber">Slight delay</span>
+      </div>
+
+      <div class="bus-card">
+        <div class="bus-id">Bus3</div>
+        <h3 class="route-name">Crosstown</h3>
+        <p class="route-ends">Mukono → Kampala Bus Park</p>
+         <p class="driver_name">Roger Kire</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 07:00</span>
+          <span class="info-tag">UGX 2,900</span>
+        </div>
+        <span class="status-badge status-red">Fully booked</span>
+      </div>
+
+      <div class="bus-card">
+        <div class="bus-id">Bus4</div>
+        <h3 class="route-name">Crosstown Link</h3>
+        <p class="route-ends">Kireka → Namirembe</p>
+        <p class="driver_name">James Mugi</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 07:15</span>
+          <span class="info-tag">UGX 2,600</span>
+        </div>
+        
+        <span class="status-badge status-green">On time</span>
+      </div>
+    </div>
+  </section>
+    <!-- DRIVER SECTION -->
+  <section class="section section-pale" id="drivers">
+    <h2 class="section-title">Our Drivers</h2>
+    <p class="section-desc">Our dedicated drivers keeping our passengers safe every day</p>
+
+    <div class="cards-grid">
+      <div class="driver-card">
+        <div class="driver-id">driver1</div>
+        <h3 class="driver-name">John Kirunda</h3>
+        <p class="route-ends">City Center → Mulago Hospital</p>
+        <p>OFF ON MONDAY</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 08:30</span>
+          <span class="info-tag"> ON DUTY</span>
+        </div>
+        <span class="status-badge status-green">On time</span>
+      </div>
+
+      <div class="driver-card">
+        <div class="driver-id">Driver2</div>
+        <h3 class="driver-name">Peter Musoke</h3>
+        <p class="route-ends">Kampala City Center → Entebbe Airport</p>
+         <p>OFF ON TUESDAY</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 08:45</span>
+          <span class="info-tag">ON DUTY</span>
+        </div>
+        <span class="status-badge status-amber">Slight delay</span>
+      </div>
+
+      <div class="driver-card">
+        <div class="driver-id">Driver3</div>
+        <h3 class="driver-name">Roger Kire</h3>
+        <p class="route-ends">Mukono → Kampala Bus Park</p>
+         <p>OFF ON WEDNESDAY</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 07:00</span>
+          <span class="info-tag">ON DUTY</span>
+        </div>
+        <span class="status-badge status-red">Fully booked</span>
+      </div>
+         <div class="driver-card">
+        <div class="driver-id">Driver4</div>
+        <h3 class="driver-name">Babra Buberwa</h3>
+        <p class="route-ends">Reliever</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 08:30</span>
+          <span class="info-tag">MONDAY</span>
+        </div>
+        <span class="status-badge status-amber">Slight delay</span>
+      </div>
+        <div class="driver-card">
+        <div class="driver-id">Driver5</div>
+        <h3 class="driver-name">Jane Uwera</h3>
+        <p class="route-ends">Reliever</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 08:45</span>
+          <span class="info-tag">TUESDAY</span>
+        </div>
+        <span class="status-badge status-amber">Slight delay</span>
+      </div>  <div class="driver-card">
+        <div class="driver-id">Driver6</div>
+        <h3 class="driver-name">Bob Nsobya</h3>
+        <p class="route-ends">Reliever</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 07:45</span>
+          <span class="info-tag">UGX WEDNESDAY</span>
+        </div>
+        <span class="status-badge status-amber">Slight delay</span>
+      </div>
+   <div class="driver-card">
+        <div class="driver-id">Driver7</div>
+        <h3 class="driver-name">Jackie Namata</h3>
+        <p class="route-ends">Reliever</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 07:20</span>
+          <span class="info-tag">THURSDAY</span>
+        </div>
+        <span class="status-badge status-amber">Slight delay</span>
+      </div>
+
+
+      <div class="driver-card">
+        <div class="driver-id">Driver8</div>
+        <h3 class="driver-name">James Mugi </h3>
+        <p class="route-ends">Kireka → Namirembe</p>
+         <p>OFF ON THURSDAY</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 07:15</span>
+          <span class="info-tag">OFF DAY</span>
+        </div>
+       
+       
+      </div>
+    </div>
+  </section>
+    <!-- ROUTES SECTION -->
+  <section class="section section-pale" id="routes">
+    <h2 class="section-title">Our routes</h2>
+    <p class="section-desc">Four electric corridors serving Kampala every day.</p>
+
+    <div class="cards-grid">
+      <div class="route-card">
+        <div class="route-id">R1</div>
+        <h3 class="route-name">Express North</h3>
+        <p class="route-ends">City Center → Mulago Hospital</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 08:30</span>
+          <span class="info-tag">UGX 3,500</span>
+        </div>
+        <span class="status-badge status-green">On time</span>
+      </div>
+
+      <div class="route-card">
+        <div class="route-id">R2</div>
+        <h3 class="route-name">Airport Link</h3>
+        <p class="route-ends">Kampala City Center → Entebbe Airport</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 08:45</span>
+          <span class="info-tag">UGX 5,000</span>
+        </div>
+        <span class="status-badge status-amber">Slight delay</span>
+      </div>
+
+      <div class="route-card">
+        <div class="route-id">R3</div>
+        <h3 class="route-name">Crosstown</h3>
+        <p class="route-ends">Mukono → Kampala Bus Park</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 07:00</span>
+          <span class="info-tag">UGX 2,900</span>
+        </div>
+        <span class="status-badge status-red">Fully booked</span>
+      </div>
+
+      <div class="route-card">
+        <div class="route-id">R4</div>
+        <h3 class="route-name">Crosstown Link</h3>
+        <p class="route-ends">Kireka → Namirembe</p>
+        <div class="route-info">
+          <span class="info-tag">Next: 07:15</span>
+          <span class="info-tag">UGX 2,600</span>
+        </div>
+      
+        <span class="status-badge status-green">On time</span>  
+      </div>
+    </div>
+  </section>
+    
+ <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo logo-white">
+        Electro<span class="logo-green">Ride</span>
+      </div>
+      <p class="footer-tagline">
+        Uganda's zero-emission public bus network.
+        Powered by 100% renewable solar energy.
+      </p>
+  <div class="footer-bottom">
+    <p>&#169; 2026 ElectroRide Uganda Ltd. All Rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>
