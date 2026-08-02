@@ -100,6 +100,7 @@ a {
   color: #14b87a;
 }
 
+
 .nav {
   display: flex;
   gap: 4px;
@@ -117,7 +118,7 @@ a {
 
 .nav-link:hover {
   color: white;
-  background: rgba(255, 255, 255, 0.08);
+  background: #00ff66;
 }
 /* Hero Section */
 .hero {

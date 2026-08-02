@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0a1a3d; /* Dark blue banner */
+  background: #0d1b2a; /* Dark blue banner */
   padding: 15px 40px;
 }
 
@@ -25,22 +25,36 @@ header {
   color: #00ff66;
 }
 
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-  color: #fff;
   text-decoration: none;
-  transition: color 0.3s;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  color: #00ff66;
+nav ul li a:hover {
+  background: #00ff66;
+  color: #000;
+  box-shadow: 0 0 10px #00ff66;
 }
+
+nav ul li a.active {
+  background: #00ff66;
+  color: #000;
+  box-shadow: 0 0 10px #00ff66;
+}
+
 
 /* About Section */
 .about {
@@ -89,7 +103,7 @@ nav ul li a.active {
 
 /* Footer */
 footer {
-  background: #111;
+  background: #0d1b2a;
   color: #aaa;
   text-align: center;
   padding: 15px;

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #121212;
+  background:linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
 }
 
@@ -9,7 +9,7 @@ body {
 .sidebar {
   width: 220px;
   height: 100vh;
-  background: #1f1f1f;
+  background: #0d1b2a;
   position: fixed;
   top: 0;
   left: 0;
@@ -96,7 +96,7 @@ body {
   left: 220px;
   right: 0;
   height: 60px;
-  background: #1f1f1f;
+  background: #0d1b2a;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -150,7 +150,7 @@ body {
 
 /* Footer */
 footer {
-  background: #111;
+  background: #0d1b2a;
   color: #aaa;
   text-align: center;
   padding: 15px;

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Ride - ElectroRide</title>
+  <link rel="stylesheet" href="book_your_ride.css"> <!-- separate CSS -->
+
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <div class="logo">
+      Electro<span class="logo-green">Ride</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact_us.html" >Contact</a></li>
+         <li><a href="Book_your_ride.html" class="active">Book A Ride</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Booking Form -->
+  <main class="booking-container">
+    <form class="booking-form">
+      <h2>Ride Reservation</h2>
+
+      <label for="name">Passenger Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="pickup">Pickup Location</label>
+      <input type="text" id="pickup" name="pickup" required>
+
+      <label for="dropoff">Drop-off Location</label>
+      <input type="text" id="dropoff" name="dropoff" required>
+
+      <label for="route">Select Route</label>
+      <select id="route" name="route" required>
+        <option value="express">Express North</option>
+        <option value="airport">Airport Link</option>
+        <option value="crosstown">Crosstown</option>
+        <option value="link">Crosstown Link</option>
+      </select>
+
+      <label for="date">Travel Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Departure Time</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" name="payment" required>
+        <option value="cash">Cash</option>
+        <option value="card">Card</option>
+        <option value="mobile">Mobile Money</option>
+      </select>
+
+      <button type="submit" class="book-btn">Confirm Ride</button>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo logo-white">
+        Electro<span class="logo-green">Ride</span>
+      </div>
+      <p class="footer-tagline">
+        Uganda's zero-emission public bus network.
+        Powered by 100% renewable solar energy.
+      </p><br>
+
+    <div class="footer-col">
+      <a href="https://wa.me/97477211240" class="whatsapp-btn" target="_blank">
+  <i class="fa fa-whatsapp"></i> Contact Support
+</a><br><br>
+  <a href="home.html" class="whatsapp-btn">Home</a>
+    </div>
+  <div class="footer-bottom">
+    <p>&#169; 2026 ElectroRide Uganda Ltd. All Rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
