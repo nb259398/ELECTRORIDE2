@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>add_vehicles - ElectroRide</title>
+  <link rel="stylesheet" href="add_vehicles.css"> <!-- separate CSS -->
+
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <div class="logo">
+      Electro<span class="logo-green">Ride</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="add_routes.html">Manage Routes</a></li>
+        <li><a href="add_drivers.html" >Manage Drivers</a></li>
+         <li><a href="reports.html" >View Reports</a></li>
+         <li><a href="add_vehicle.html" class="active">Manage Vehicles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- add vehicles-->
+  <main class="add_vehicle-container">
+  
+<form class="add_vehicle-form" action="php/add_vehicle.php" method="post">
+  <h2>ADD A VEHICLE</h2>
+  <label>Plate Number:</label>
+  <input type="text" name="plate_number" required>
+
+  <label>Type:</label>
+  <input type="text" name="type" required>
+
+  <label>Capacity:</label>
+  <input type="number" name="capacity" required>
+
+  <label>Status:</label>
+  <select name="status">
+    <option value="Active">Active</option>
+    <option value="Inactive">Inactive</option>
+  </select>
+
+  <button type="submit" class="add_vehicle-btn">Add Vehicle</button>
+</form>
+
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo logo-white">
+        Electro<span class="logo-green">Ride</span>
+      </div>
+      <p class="footer-tagline">
+        Uganda's zero-emission public bus network.
+        Powered by 100% renewable solar energy.
+      </p><br>
+
+    <div class="footer-col">
+   
+  <a href="admin.html" class="whatsapp-btn">Back</a>
+    </div>
+  <div class="footer-bottom">
+    <p>&#169; 2026 ElectroRide Uganda Ltd. All Rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,205 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 20px 40px;
+  background: #0d1b2a; 
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo-green {
+  color: #00ff66; /* bright green accent */
+  text-shadow: 0 0 8px #00ff66;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #00ff66;
+  color: #000;
+  box-shadow: 0 0 10px #00ff66;
+}
+
+/* Add Vehicle Container */
+.add_vehicle-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+/* Add Route Container */
+.add_route-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Add Route Form */
+.add_route-form {
+  background: #1f1f1f;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.5);
+  width: 100%;
+  max-width: 500px;
+}
+
+.add_route-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00ffe0;
+  text-shadow: 0 0 10px #00ffe0;
+}
+
+.add_route-form label {
+  font-weight: bold;
+  margin-top: 12px;
+  display: block;
+}
+
+.add_route-form input,
+.add_route-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2a2a;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(0, 255, 200, 0.5);
+}
+
+.add_route-form input:focus,
+.add_route-form select:focus {
+  outline: none;
+  box-shadow: 0 0 12px #00ffcc;
+}
+
+/* Button */
+.add_route-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #00ffcc;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add_route-btn:hover {
+  background: #00cca3;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Footer */
+.footer {
+  background: #0d1b2a;
+  color: #aaa;
+  padding: 30px 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-brand {
+  text-align: center;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+.footer-col a {
+  display: inline-block;
+  background: #00ffcc;
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.footer-col a:hover {
+  background: #00cca3;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #777;
+  border-top: 1px solid #222;
+  padding-top: 10px;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: #25D366;
+  color: #fff;
+  font-weight: bold;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  box-shadow: 0 0 12px #25D366;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}

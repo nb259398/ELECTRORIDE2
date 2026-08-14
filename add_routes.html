@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>add_routes - ElectroRide</title>
+  <link rel="stylesheet" href="add_routes.css"> <!-- separate CSS -->
+
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <div class="logo">
+      Electro<span class="logo-green">Ride</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="add_routes.html" class="active">Manage Routes</a></li>
+        <li><a href="add_drivers.html" >Manage Drivers</a></li>
+         <li><a href="reports.html" >View Reports</a></li>
+         <li><a href="add_vehicle.html" >Manage Vehicles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- add routes-->
+<main class="add_route-container">
+  <form class="add_route-form" action="php/add_route.php" method="post">
+    <h2>ADD A ROUTE</h2>
+
+    <label for="route_id">Route ID:</label>
+    <input type="text" id="route_id" name="route_id" required>
+
+    <label for="route_name">Route Name:</label>
+    <input type="text" id="route_name" name="route_name" required>
+
+    <label for="start_point">Start Point:</label>
+    <input type="text" id="start_point" name="start_point" required>
+
+    <label for="end_point">End Point:</label>
+    <input type="text" id="end_point" name="end_point" required>
+
+    <label for="fare">Fare (UGX):</label>
+    <input type="number" id="fare" name="fare" required>
+
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+      <option value="Active">Active</option>
+      <option value="Inactive">Inactive</option>
+    </select>
+
+    <button type="submit" class="add_route-btn">Add Route</button>
+  </form>
+</main>
+
+
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo logo-white">
+        Electro<span class="logo-green">Ride</span>
+      </div>
+      <p class="footer-tagline">
+        Uganda's zero-emission public bus network.
+        Powered by 100% renewable solar energy.
+      </p><br>
+
+    <div class="footer-col">
+   
+  <a href="admin.html" class="whatsapp-btn">Back</a>
+    </div>
+  <div class="footer-bottom">
+    <p>&#169; 2026 ElectroRide Uganda Ltd. All Rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

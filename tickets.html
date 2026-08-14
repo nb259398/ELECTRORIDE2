@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Tickets - ElectroRide</title>
+  <link rel="stylesheet" href="tickets.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      Electro<span class="logo-green">Ride</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="passengers.html">Manage Passengers</a></li>
+        <li><a href="reports.html">View Reports</a></li>
+        <li><a href="tickets.html" class="active">Manage Tickets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Tickets Table -->
+  <main class="tickets-container">
+    <h1>Tickets Management</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Ticket ID</th>
+          <th>Passenger</th>
+          <th>Trip</th>
+          <th>Date</th>
+          <th>Fare</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+          include 'php/connect.php';
+          $result = $conn->query("SELECT * FROM Tickets");
+          while($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>{$row['ticket_id']}</td>
+                    <td>{$row['passenger_name']}</td>
+                    <td>{$row['trip_id']}</td>
+                    <td>{$row['date']}</td>
+                    <td>{$row['fare']}</td>
+                    <td>{$row['status']}</td>
+                    <td>
+                      <form action='php/update_ticket.php' method='post' style='display:inline;'>
+                        <input type='hidden' name='ticket_id' value='{$row['ticket_id']}'>
+                        <select name='status'>
+                          <option value='Pending'>Pending</option>
+                          <option value='Confirmed'>Confirmed</option>
+                          <option value='Cancelled'>Cancelled</option>
+                        </select>
+                        <button type='submit'>Update</button>
+                      </form>
+                    </td>
+                  </tr>";
+          }
+          $conn->close();
+        ?>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo logo-white">
+        Electro<span class="logo-green">Ride</span>
+      </div>
+      <p class="footer-tagline">
+        Uganda's zero-emission public bus network.
+        Powered by 100% renewable solar energy.
+      </p><br>
+
+    <div class="footer-col">
+   
+  <a href="admin.html" class="whatsapp-btn">Back</a>
+    </div>
+  <div class="footer-bottom">
+    <p>&#169; 2026 ElectroRide Uganda Ltd. All Rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reports - ElectroRide</title>
+  <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      Electro<span class="logo-green">Ride</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="add_routes.html">Manage Routes</a></li>
+        <li><a href="add_drivers.html">Manage Drivers</a></li>
+        <li><a href="add_vehicle.html">Manage Vehicles</a></li>
+        <li><a href="reports.html" class="active">View Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Reports Section -->
+  <main class="reports-container">
+    <h1>System Reports</h1>
+
+    <!-- Vehicles Report -->
+    <section class="report-block">
+      <h2>Vehicles</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Plate Number</th>
+            <th>Type</th>
+            <th>Capacity</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- PHP will populate rows -->
+          <?php
+            include 'php/connect.php';
+            $result = $conn->query("SELECT * FROM Vehicles");
+            while($row = $result->fetch_assoc()) {
+              echo "<tr>
+                      <td>{$row['plate_number']}</td>
+                      <td>{$row['type']}</td>
+                      <td>{$row['capacity']}</td>
+                      <td>{$row['status']}</td>
+                    </tr>";
+            }
+            $conn->close();
+          ?>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Drivers Report -->
+   <section class="report-block">
+  <h2>Drivers</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Driver ID</th>
+        <th>Name</th>
+        <th>Licence Number</th>
+        <th>Contact</th>
+        <th>Assigned Vehicle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+        include 'php/connect.php';
+        $result = $conn->query("SELECT * FROM Drivers");
+        while($row = $result->fetch_assoc()) {
+          echo "<tr>
+                  <td>{$row['driver_id']}</td>
+                  <td>{$row['name']}</td>
+                  <td>{$row['licence_number']}</td>
+                  <td>{$row['contact']}</td>
+                  <td>{$row['assigned_vehicle']}</td>
+                </tr>";
+        }
+      ?>
+    </tbody>
+  </table>
+</section>
+
+
+    <!-- Routes Report -->
+    <section class="report-block">
+  <h2>Routes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Route ID</th>
+        <th>Route Name</th>
+        <th>Start Point</th>
+        <th>End Point</th>
+        <th>Fare</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+        include 'php/connect.php';
+        $result = $conn->query("SELECT * FROM Routes");
+        while($row = $result->fetch_assoc()) {
+          echo "<tr>
+                  <td>{$row['route_id']}</td>
+                  <td>{$row['route_name']}</td>
+                  <td>{$row['start_point']}</td>
+                  <td>{$row['end_point']}</td>
+                  <td>{$row['fare']}</td>
+                  <td>{$row['status']}</td>
+                </tr>";
+        }
+        $conn->close();
+      ?>
+    </tbody>
+  </table>
+</section>
+
+      <!-- Tickets Report -->
+  <section class="report-block">
+    <h2>Tickets</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Ticket ID</th>
+          <th>Passenger</th>
+          <th>Trip</th>
+          <th>Date</th>
+          <th>Fare</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+          include 'php/connect.php';
+          $result = $conn->query("SELECT * FROM Tickets");
+          while($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>{$row['ticket_id']}</td>
+                    <td>{$row['passenger_name']}</td>
+                    <td>{$row['trip_id']}</td>
+                    <td>{$row['date']}</td>
+                    <td>{$row['fare']}</td>
+                    <td>{$row['status']}</td>
+                  </tr>";
+          }
+        ?>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Passengers Report -->
+  <section class="report-block">
+    <h2>Passengers</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Passenger Name</th>
+          <th>Trip ID</th>
+          <th>Route</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+          $result = $conn->query("SELECT * FROM Passengers");
+          while($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>{$row['name']}</td>
+                    <td>{$row['trip_id']}</td>
+                    <td>{$row['route']}</td>
+                    <td>{$row['status']}</td>
+                  </tr>";
+          }
+          $conn->close();
+        ?>
+      </tbody>
+    </table>
+  </section>
+  </main>
+
+   <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo logo-white">
+        Electro<span class="logo-green">Ride</span>
+      </div>
+      <p class="footer-tagline">
+        Uganda's zero-emission public bus network.
+        Powered by 100% renewable solar energy.
+      </p>
+  <div class="footer-bottom">
+    <p>&#169; 2026 ElectroRide Uganda Ltd. All Rights reserved.</p>
+  
+  </div>
+
+</footer>
+</body>
+</html>

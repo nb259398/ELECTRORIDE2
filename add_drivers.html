@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>add_drivers - ElectroRide</title>
+  <link rel="stylesheet" href="add_drivers.css"> <!-- separate CSS -->
+
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <div class="logo">
+      Electro<span class="logo-green">Ride</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="add_routes.html">Manage Routes</a></li>
+        <li><a href="add_drivers.html" class="active">Manage Drivers</a></li>
+         <li><a href="reports.html" >View Reports</a></li>
+         <li><a href="add_vehicle.html" >Manage Vehicles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- add drivers-->
+ <main class="add_driver-container">
+  <form class="add_driver-form" action="php/add_driver.php" method="post">
+    <h2>ADD A DRIVER</h2>
+
+    <label for="name">Driver Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="licence_number">Licence Number:</label>
+    <input type="text" id="licence_number" name="licence_number" required>
+
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" required>
+
+    <label for="assigned_vehicle">Assigned Vehicle (ID):</label>
+    <input type="number" id="assigned_vehicle" name="assigned_vehicle">
+
+    <button type="submit" class="add_driver-btn">Add Driver</button>
+  </form>
+</main>
+
+
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo logo-white">
+        Electro<span class="logo-green">Ride</span>
+      </div>
+      <p class="footer-tagline">
+        Uganda's zero-emission public bus network.
+        Powered by 100% renewable solar energy.
+      </p><br>
+
+    <div class="footer-col">
+   
+  <a href="admin.html" class="whatsapp-btn">Back</a>
+    </div>
+  <div class="footer-bottom">
+    <p>&#169; 2026 ElectroRide Uganda Ltd. All Rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
