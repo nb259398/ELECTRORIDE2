@@ -1,5 +1,5 @@
 <?php
-include 'connect.php'; // DB connection
+include 'php/connect.php'; // DB connection
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ include 'connect.php'; // DB connection
 <head>
   <meta charset="UTF-8">
   <title>System Reports - ElectroRide</title>
-  <link rel="stylesheet" href="../reports.css">
+  <link rel="stylesheet" href="reports.css">
 </head>
 <body>
       <!-- Header -->
@@ -21,7 +21,7 @@ include 'connect.php'; // DB connection
         <li><a href="add_routes.html">Manage Routes</a></li>
         <li><a href="add_drivers.html">Manage Drivers</a></li>
         <li><a href="add_vehicle.html">Manage Vehicles</a></li>
-        <li><a href="php/reports.php" class="active">View Reports</a></li>
+        <li><a href="reports.php" class="active">View Reports</a></li>
       </ul>
     </nav>
   </header>

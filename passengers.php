@@ -1,37 +1,19 @@
 <?php
-include 'connect.php'; // connect to database
+include 'php/connect.php';
 
-// Fetch all tickets
-$sql = "SELECT * FROM Tickets ORDER BY ticket_id DESC";
+// Fetch passengers from Tickets table
+$sql = "SELECT ticket_id, passenger_name, route, date, time, status FROM Tickets ORDER BY ticket_id DESC";
 $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tickets</title>
-  <link rel="stylesheet" href="../tickets.css">
-
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background: #f2f2f2;
-    }
-  </style>
+  <title>Passengers - ElectroRide</title>
+  <link rel="stylesheet" href="passengers.css">
 </head>
 <body>
-    <!-- Header -->
+  <!-- Header -->
   <header>
     <div class="logo">
       Electro<span class="logo-green">Ride</span>
@@ -39,24 +21,22 @@ $result = $conn->query($sql);
     <nav>
       <ul>
         <li><a href="admin.html">Admin</a></li>
-        <li><a href="">Manage Passengers</a></li>
-        <li><a href="">View Reports</a></li>
-        <li><a href="php/tickets.php" class="active">Manage Tickets</a></li>
+        <li><a href="add_routes.html">Manage Routes</a></li>
+        <li><a href="tickets.php">Manage Tickets</a></li>
+        <li><a href="reports.php">View Reports</a></li>
+        <li><a href="passengers.php" class="active">Passengers</a></li>
       </ul>
     </nav>
   </header>
-   <main class="tickets-container" >
-  <h1>Booked Tickets</h1>
+  <main class="passengers-container">
+  <h1>PASSENGER LIST</h1>
   <table>
     <tr>
       <th>ID</th>
       <th>Passenger</th>
-      <th>Pickup</th>
-      <th>Drop-off</th>
       <th>Route</th>
       <th>Date</th>
       <th>Time</th>
-      <th>Payment</th>
       <th>Status</th>
     </tr>
     <?php
@@ -65,22 +45,19 @@ $result = $conn->query($sql);
             echo "<tr>
                     <td>".$row['ticket_id']."</td>
                     <td>".$row['passenger_name']."</td>
-                    <td>".$row['pickup']."</td>
-                    <td>".$row['dropoff']."</td>
                     <td>".$row['route']."</td>
                     <td>".$row['date']."</td>
                     <td>".$row['time']."</td>
-                    <td>".$row['payment']."</td>
                     <td>".$row['status']."</td>
                   </tr>";
         }
     } else {
-        echo "<tr><td colspan='9'>No tickets booked yet.</td></tr>";
+        echo "<tr><td colspan='6'>No passengers yet.</td></tr>";
     }
     ?>
   </table>
    </main>
-    <!-- FOOTER -->
+       <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
