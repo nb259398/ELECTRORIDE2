@@ -51,6 +51,10 @@
 
     <button type="submit" class="add_route-btn">Add Route</button>
   </form>
+  <?php if (isset($_GET['success'])): ?>
+  <p style="color:lime;">✅ Route added successfully!</p>
+<?php endif; ?>
+
 </main>
 
 
