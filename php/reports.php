@@ -26,7 +26,7 @@ include 'connect.php'; // DB connection
     </nav>
   </header>
   <main class="reports-container">
-  <h1>System Reports</h1>
+  <h1>SYSTEM REPORTS</h1>
 
   <!-- Tickets Report -->
   <section class="report-block">
