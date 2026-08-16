@@ -24,11 +24,11 @@
 
   <!-- Booking Form -->
   <main class="booking-container">
-    <form class="booking-form" action="php/add_ticket.php" method="post">
+    <form class="booking-form" action="add_ticket.php" method="post">
       <h2>Ride Reservation</h2>
 
       <label for="name">Passenger Name</label>
-      <input type="text" id="name" name="name" required>
+   <input type="text" id="name" name="passenger_name" required>
 
       <label for="pickup">Pickup Location</label>
       <input type="text" id="pickup" name="pickup" required>
@@ -42,6 +42,11 @@
         <option value="airport">Airport Link</option>
         <option value="crosstown">Crosstown</option>
         <option value="link">Crosstown Link</option>
+         <option value="hoima">Hoima Road</option>
+        <option value="entebbe">Entebbe Road</option>
+        <option value="mbarala">Mbarala Road</option>
+        <option value="jinja">Jinja Road</option>
+        
       </select>
 
       <label for="date">Travel Date</label>
@@ -56,8 +61,16 @@
         <option value="card">Card</option>
         <option value="mobile">Mobile Money</option>
       </select>
+      <label for="status">Booking Status</label>
+     <select id="status" name="status">
+      <option value="Pending">Pending</option>
+      <option value="Confirmed">Confirmed</option>
+      <option value="Cancelled">Cancelled</option>
+      </select>
+
 
       <button type="submit" class="book-btn">Confirm Ride</button>
+      
     </form>
   </main>
 

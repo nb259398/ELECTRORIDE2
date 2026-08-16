@@ -160,6 +160,7 @@ include 'php/connect.php'; // DB connection
       </p>
   <div class="footer-bottom">
     <p>&#169; 2026 ElectroRide Uganda Ltd. All Rights reserved.</p>
+   <a href="reports.php" class="whatsapp-btn">TOP</a>
   
   </div>
 
