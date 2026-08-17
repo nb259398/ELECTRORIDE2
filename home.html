@@ -67,58 +67,59 @@
   
   </section>
   
+<!-- PLANNER SECTION -->
+<section class="section section-light" id="planner">
+  <h2 class="section-title">Plan your Trip</h2>
+  <p class="section-desc">Enter where you are going and we will find the best route for you.</p>
 
-  <!-- PLANNER SECTION -->
-  <section class="section section-light" id="planner">
-    <h2 class="section-title">Plan your Trip</h2>
-    <p class="section-desc">Enter where you are going and we will find the best route for you.</p>
-
-    <div class="planner-card">
-      <div class="planner-row">
-        <div class="form-group">
-          <label for="fromInput">From</label>
-          <input type="text" id="fromInput" placeholder="e.g. Kampala City Center" class="form-input">
-        </div>
-
-        <button class="swap-btn" id="swapBtn" title="Swap stops">⇄</button>
-
-        <div class="form-group">
-          <label for="toInput">To</label>
-          <input type="text" id="toInput" placeholder="e.g. Mulago Hospital" class="form-input">
-        </div>
-      </div>
-
-      <div class="planner-row">
-        <div class="form-group">
-          <label for="dateInput">Date</label>
-          <input type="date" id="dateInput" class="form-input">
-        </div>
-
-        <div class="form-group">
-          <label for="passengerSelect">Passengers</label>
-          <select id="passengerSelect" class="form-input">
-            <option>1 Passenger</option>
-            <option>2 Passengers</option>
-            <option>3 Passengers</option>
-            <option>4 Passengers</option>
-            <option>5 Passengers</option>
-            <option>6 Passengers</option>
-            <option>7 Passengers</option>
-            <option>8 Passengers</option>
-            <option>9 Passengers</option>
-            <option>10+ Passengers</option>
-          </select>
-        </div>
-      </div>
-    
-
-      <div>
-        <button class="btn btn-green btn-full" id="searchBtn">Search routes</button>
-        <div id="searchResults"></div>
-      </div>
+  <div class="planner-card">
+   <form action="search_routes.php" method="post">
+  <div class="planner-row">
+    <div class="form-group">
+      <label for="fromInput">From</label>
+      <input type="text" id="fromInput" name="from" placeholder="e.g. Kampala City Center" class="form-input" required>
     </div>
-   
-  </section>
+
+    <button type="button" class="swap-btn" id="swapBtn" title="Swap stops">⇄</button>
+
+    <div class="form-group">
+      <label for="toInput">To</label>
+      <input type="text" id="toInput" name="to" placeholder="e.g. Mulago Hospital" class="form-input" required>
+    </div>
+  </div>
+
+  <div class="planner-row">
+    <div class="form-group">
+      <label for="dateInput">Date</label>
+      <input type="date" id="dateInput" name="date" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+      <label for="passengerSelect">Passengers</label>
+      <select id="passengerSelect" name="passengers" class="form-input" required>
+        <option value="1">1 Passenger</option>
+        <option value="2">2 Passengers</option>
+        <option value="3">3 Passengers</option>
+        <option value="4">4 Passengers</option>
+        <option value="5">5 Passengers</option>
+        <option value="6">6 Passengers</option>
+        <option value="7">7 Passengers</option>
+        <option value="8">8 Passengers</option>
+        <option value="9">9 Passengers</option>
+        <option value="10">10+ Passengers</option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-green btn-full">Search routes</button>
+  </div>
+</form>
+
+    <!-- Results will be shown here -->
+    <div id="searchResults"></div>
+  </div>
+</section>
 
   <!-- ROUTES SECTION -->
   <section class="section section-pale" id="routes">
