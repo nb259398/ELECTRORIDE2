@@ -10,6 +10,7 @@ $result = $conn->query($sql);
 <html>
 <head>
   <title>Tickets</title>
+  <link rel="icon" href="Favicon.jpg" type="image/jpg" sizes="16x16 32x32">
   <link rel="stylesheet" href="tickets.css">
 
   <style>

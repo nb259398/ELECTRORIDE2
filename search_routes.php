@@ -11,6 +11,7 @@ $passengers = (int)$_POST['passengers'];
 <head>
   <meta charset="UTF-8">
   <title>AVAILABLE ROUTES</title>
+  <link rel="icon" href="Favicon.jpg" type="image/jpg" sizes="16x16 32x32">
   <!-- Link to stylesheet -->
   <link rel="stylesheet" href="search_routes.css">
 </head>

@@ -7,6 +7,7 @@ include 'php/connect.php'; // DB connection
 <head>
   <meta charset="UTF-8">
   <title>System Reports - ElectroRide</title>
+  <link rel="icon" href="Favicon.jpg" type="image/jpg" sizes="16x16 32x32">
   <link rel="stylesheet" href="reports.css">
 </head>
 <body>
